@@ -1,0 +1,66 @@
+[
+    {
+        "codigo": "01",
+        "nombre": "Seco de pollo",
+        "categoria": "Segundos",
+        "precio": 3.0,
+        "stock": 3,
+        "disponible": true
+    },
+    {
+        "codigo": "02",
+        "nombre": "Jugo",
+        "categoria": "Bebida",
+        "precio": 1.5,
+        "stock": 3,
+        "disponible": true
+    },
+    {
+        "codigo": "03",
+        "nombre": "Encebollado",
+        "categoria": "Sopas",
+        "precio": 4.5,
+        "stock": 2,
+        "disponible": true
+    },
+    {
+        "codigo": "04",
+        "nombre": "Arroz con camaron",
+        "categoria": "Platos a la carta",
+        "precio": 4.5,
+        "stock": 2,
+        "disponible": true
+    },
+    {
+        "codigo": "06",
+        "nombre": "Cake",
+        "categoria": "Postre",
+        "precio": 2.0,
+        "stock": 4,
+        "disponible": true
+    },
+    {
+        "codigo": "05",
+        "nombre": "Camarones",
+        "categoria": "Platos a la carta",
+        "precio": 4.0,
+        "stock": 2,
+        "disponible": true
+    },
+    {
+        "codigo": "07",
+        "nombre": "Milkshake",
+        "categoria": "Bebida",
+        "precio": 2.0,
+        "stock": 3,
+        "disponible": true
+    },
+    {
+        "codigo": "08",
+        "nombre": "Tiramisu",
+        "categoria": "Postre",
+        "precio": 1.0,
+        "stock": 4,
+        "disponible": true
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "identificacion": "10046",
+        "nombre": "Talia",
+        "correo": "talia@",
+        "usuario": "talia",
+        "contrasena": "1234",
+        "rol": "Administrador"
+    },
+    {
+        "identificacion": "10047",
+        "nombre": "Jefferson",
+        "correo": "jeff@",
+        "usuario": "jeff",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10048",
+        "nombre": "Mercedes",
+        "correo": "mercedes@",
+        "usuario": "mercedes",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10049",
+        "nombre": "Humberto",
+        "correo": "humber@",
+        "usuario": "humberto",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10050",
+        "nombre": "Paulina",
+        "correo": "pau@",
+        "usuario": "paulina",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10051",
+        "nombre": "Daniel",
+        "correo": "daniel@",
+        "usuario": "daniel",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10052",
+        "nombre": "Alex",
+        "correo": "alex@",
+        "usuario": "alex",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "10053",
+        "nombre": "Janneth",
+        "correo": "janneth@",
+        "usuario": "janneth",
+        "contrasena": "1234",
+        "rol": "Cliente"
+    }
+]
