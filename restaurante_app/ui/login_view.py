@@ -4,7 +4,7 @@ from tkinter import ttk
 
 class LoginView(tk.Frame):
     def __init__(self, master, restaurante_servicio, al_iniciar_sesion):
-        super().__init__(master, bg="#cbf5ff")
+        super().__init__(master, bg="#F6C89F")
 
         self.restaurante_servicio = restaurante_servicio
         self.al_iniciar_sesion = al_iniciar_sesion
@@ -22,14 +22,14 @@ class LoginView(tk.Frame):
 
         estilo.configure(
             "Login.TButton",
-            background="#144ecc",
-            foreground="#f1f3f7",
+            background="#D96C32",
+            foreground="#F6C89F",
             font=("Arial", 11, "bold"),
             padding=(14, 8),
             borderwidth=0,
         )
 
-        estilo.map("Login.TButton", background=[("active", "#789ef1")])
+        estilo.map("Login.TButton", background=[("active", "#F6C89F")])
 
     def cargar_logo(self):
         # Carga el logo desde assets/logo usando una ruta relativa al proyecto.
@@ -54,7 +54,7 @@ class LoginView(tk.Frame):
             contenedor,
             text="RESTAURANTE\nJALEX",
             bg="#fdfdfd",
-            fg="#060e22",
+            fg="#000207",
             font=("Arial", 22, "bold")
         ).pack(pady=(0, 6))
 
@@ -62,7 +62,7 @@ class LoginView(tk.Frame):
             contenedor,
             text="Inicio de sesión",
             bg="#fdfdfd",
-            fg="#516173",
+            fg="#000000",
             font=("Arial", 12)
         ).pack(pady=(0, 22))
 
@@ -70,7 +70,7 @@ class LoginView(tk.Frame):
             contenedor,
             text="Usuario:",
             bg="#fdfdfd",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).pack(anchor="w")
 
@@ -89,7 +89,7 @@ class LoginView(tk.Frame):
             contenedor,
             text="Contraseña:",
             bg="#fdfdfd",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).pack(anchor="w")
 
@@ -114,7 +114,7 @@ class LoginView(tk.Frame):
             contenedor,
             text="",
             bg="#fdfdfd",
-            fg="#b42318",
+            fg="#e41a0c",
             font=("Arial", 10)
         )
 

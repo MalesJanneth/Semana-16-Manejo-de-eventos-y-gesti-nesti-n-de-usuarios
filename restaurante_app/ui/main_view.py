@@ -11,7 +11,7 @@ class MainView(tk.Frame):
         usuario_actual,
         al_cerrar_sesion
     ):
-        super().__init__(master, bg="#eef3f8")
+        super().__init__(master, bg="#f7dbc5")
 
         self.restaurante_servicio = restaurante_servicio
         self.usuario_actual = usuario_actual
@@ -52,14 +52,41 @@ class MainView(tk.Frame):
         estilo.configure(
             "Menu.TButton",
             font=("Arial", 10, "bold"),
+            background="#D96C32",
             padding=(12, 8)
+        )
+        estilo.map(
+            "Menu.TButton",
+            background=[
+                ("active", "#F6C89F")
+        ]
         )
 
         estilo.configure(
             "Accion.TButton",
             font=("Arial", 10, "bold"),
+            background="#D96C32",
             padding=(10, 7)
         )
+        estilo.map(
+            "Accion.TButton",
+            background=[
+                ("active", "#F6C89F")
+            ]
+        )
+
+        estilo.map(
+            "Accion.TButton",
+            background=[
+                ("focus", "#F6C89F"),
+                ("focus", "#F6C89F")
+            ]
+        )
+        
+        estilo.configure(
+            "Treeview.Heading",
+            background="#D96C32"
+)
 
     def cargar_iconos(self):
         ruta_base = Path(__file__).resolve().parent.parent
@@ -97,7 +124,7 @@ class MainView(tk.Frame):
     def construir_interfaz(self):
         encabezado = tk.Frame(
             self,
-            bg="#1f2a44",
+            bg="#D96C32",
             padx=20,
             pady=16
         )
@@ -106,28 +133,28 @@ class MainView(tk.Frame):
         tk.Label(
             encabezado,
             text="RESTAURANTE",
-            bg="#1f2a44",
-            fg="#ffffff",
+            bg="#D96C32",
+            fg="#080300",
             font=("Arial", 20, "bold")
         ).pack(anchor="w")
 
         tk.Label(
             encabezado,
             text=f"Bienvenido, {self.usuario_actual.nombre}",
-            bg="#1f2a44",
-            fg="#dbe5f1",
+            bg="#D96C32",
+            fg="#000000",
             font=("Arial", 11)
         ).pack(anchor="w", pady=(4, 0))
 
         cuerpo = tk.Frame(
             self,
-            bg="#eef3f8"
+            bg="#fce4d6"
         )
         cuerpo.pack(fill="both", expand=True)
 
         menu = tk.Frame(
             cuerpo,
-            bg="#ffffff",
+            bg="#fce4d6",
             width=170,
             padx=12,
             pady=15
@@ -142,8 +169,8 @@ class MainView(tk.Frame):
         tk.Label(
             menu,
             text="NAVEGACIÓN",
-            bg="#ffffff",
-            fg="#516173",
+            bg="#fce4d6",
+            fg="#000000",
             font=("Arial", 9, "bold")
         ).pack(anchor="w", pady=(0, 12))
 
@@ -194,7 +221,7 @@ class MainView(tk.Frame):
 
         area_principal = tk.Frame(
             cuerpo,
-            bg="#eef3f8"
+            bg="#F6A15B"
         )
         area_principal.pack(
             side="left",
@@ -204,7 +231,7 @@ class MainView(tk.Frame):
 
         self.contenido = tk.Frame(
             area_principal,
-            bg="#ffffff",
+            bg="#FFF4E6",
             padx=20,
             pady=20
         )
@@ -217,7 +244,7 @@ class MainView(tk.Frame):
             area_principal,
             text="Seleccione una opción.",
             bg="#eef3f8",
-            fg="#516173",
+            fg="#000000",
             font=("Arial", 10)
         )
         self.estado.pack(
@@ -244,16 +271,16 @@ class MainView(tk.Frame):
         tk.Label(
             self.contenido,
             text="Inicio",
-            bg="#ffffff",
-            fg="#1f2a44",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 20, "bold")
         ).pack(anchor="w", pady=(0, 10))
 
         tk.Label(
             self.contenido,
             text="Panel principal del sistema de restaurante.",
-            bg="#ffffff",
-            fg="#516173",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 11)
         ).pack(anchor="w", pady=(0, 20))
 
@@ -272,7 +299,7 @@ class MainView(tk.Frame):
                 f"{self.restaurante_servicio.cantidad_usuarios()}"
             ),
             bg="#f7f9fc",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 11, "bold")
         ).pack(anchor="w", pady=5)
 
@@ -283,7 +310,7 @@ class MainView(tk.Frame):
                 f"{self.restaurante_servicio.cantidad_productos()}"
             ),
             bg="#f7f9fc",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 11, "bold")
         ).pack(anchor="w", pady=5)
 
@@ -294,15 +321,11 @@ class MainView(tk.Frame):
                 f"{len(self.restaurante_servicio.listar_ventas())}"
             ),
             bg="#f7f9fc",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 11, "bold")
         ).pack(anchor="w", pady=5)
 
         self.actualizar_estado("Inicio")
-
-    # ==========================================================
-    # USUARIOS
-    # ==========================================================
 
     def mostrar_usuarios(self):
         if self.usuario_actual.rol != "Administrador":
@@ -318,8 +341,8 @@ class MainView(tk.Frame):
         tk.Label(
             self.contenido,
             text="Gestión de usuarios",
-            bg="#ffffff",
-            fg="#1f2a44",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 18, "bold")
         ).pack(anchor="w", pady=(0, 12))
 
@@ -327,7 +350,7 @@ class MainView(tk.Frame):
             self.contenido,
             text="Datos del usuario",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold"),
             padx=12,
             pady=10
@@ -344,7 +367,7 @@ class MainView(tk.Frame):
             formulario,
             text="Identificación:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,
@@ -370,7 +393,7 @@ class MainView(tk.Frame):
             formulario,
             text="Nombre:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,
@@ -396,7 +419,7 @@ class MainView(tk.Frame):
             formulario,
             text="Correo:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=1,
@@ -422,7 +445,7 @@ class MainView(tk.Frame):
             formulario,
             text="Usuario:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=1,
@@ -448,7 +471,7 @@ class MainView(tk.Frame):
             formulario,
             text="Contraseña:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=2,
@@ -475,7 +498,7 @@ class MainView(tk.Frame):
             formulario,
             text="Rol:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=2,
@@ -564,8 +587,8 @@ class MainView(tk.Frame):
         tk.Label(
             self.contenido,
             text="Usuarios registrados",
-            bg="#ffffff",
-            fg="#1f2a44",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 12, "bold")
         ).pack(
             anchor="w",
@@ -976,18 +999,14 @@ class MainView(tk.Frame):
             f"Rol seleccionado: {self.usuario_rol_var.get()}"
         )
 
-    # ==========================================================
-    # PRODUCTOS
-    # ==========================================================
-
     def mostrar_productos(self):
         self.limpiar_contenido()
 
         tk.Label(
             self.contenido,
             text="Gestión de productos",
-            bg="#ffffff",
-            fg="#1f2a44",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 18, "bold")
         ).pack(anchor="w", pady=(0, 12))
 
@@ -995,7 +1014,7 @@ class MainView(tk.Frame):
             self.contenido,
             text="Datos del producto",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold"),
             padx=12,
             pady=10
@@ -1012,7 +1031,7 @@ class MainView(tk.Frame):
             formulario,
             text="Código:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,
@@ -1038,7 +1057,7 @@ class MainView(tk.Frame):
             formulario,
             text="Nombre:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,
@@ -1064,7 +1083,7 @@ class MainView(tk.Frame):
             formulario,
             text="Categoría:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=1,
@@ -1090,7 +1109,7 @@ class MainView(tk.Frame):
             formulario,
             text="Precio:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=1,
@@ -1116,7 +1135,7 @@ class MainView(tk.Frame):
             formulario,
             text="Stock:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=2,
@@ -1515,18 +1534,14 @@ class MainView(tk.Frame):
             "Formulario limpiado."
         )
 
-    # ==========================================================
-    # VENTAS
-    # ==========================================================
-
     def mostrar_ventas(self):
         self.limpiar_contenido()
 
         tk.Label(
             self.contenido,
             text="Registro de ventas",
-            bg="#ffffff",
-            fg="#1f2a44",
+            bg="#FFF4E6",
+            fg="#000000",
             font=("Arial", 18, "bold")
         ).pack(anchor="w", pady=(0, 12))
 
@@ -1534,7 +1549,7 @@ class MainView(tk.Frame):
             self.contenido,
             text="Registrar venta",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold"),
             padx=12,
             pady=10
@@ -1551,7 +1566,7 @@ class MainView(tk.Frame):
             formulario,
             text="Usuario:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,
@@ -1587,7 +1602,7 @@ class MainView(tk.Frame):
             formulario,
             text="Producto:",
             bg="#ffffff",
-            fg="#243447",
+            fg="#000000",
             font=("Arial", 10, "bold")
         ).grid(
             row=0,

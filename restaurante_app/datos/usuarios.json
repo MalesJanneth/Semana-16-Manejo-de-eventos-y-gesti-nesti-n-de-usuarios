@@ -53,14 +53,6 @@
         "correo": "alex@",
         "usuario": "alex",
         "contrasena": "1234",
-        "rol": "Cliente"
-    },
-    {
-        "identificacion": "10053",
-        "nombre": "Janneth",
-        "correo": "janneth@",
-        "usuario": "janneth",
-        "contrasena": "1234",
-        "rol": "Cliente"
+        "rol": "Empleado"
     }
 ]
